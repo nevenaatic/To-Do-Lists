@@ -18,10 +18,9 @@ The API should support the following:
 * Creation of to-do list containing list title & list items.
 * Removal of to-do list.
 * Searching the to-do lists by title (with partial match & case insensitive, e.g. if search criteria is "Dark", the result should contain item with name "darko").
-* Logging functionality.
 * API swagger documentation.
-* (optionally) Reminder functionality implying email sending for all of to-do-lists which remindMe date has expired.
-* (optionally) Unit tests.
+*  Reminder functionality implying email sending for all of to-do-lists which remindMe date has expired.
+*  Unit tests.
 
 The API will include the following technologies/service providers:
 * .Net Core 2 (Web API)

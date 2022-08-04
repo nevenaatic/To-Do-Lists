@@ -1,0 +1,10 @@
+.background {
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: rgb(223, 221, 221) !important;
+    max-width: 100%;
+    max-height: max-content;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}

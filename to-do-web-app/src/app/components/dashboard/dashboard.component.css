@@ -1,0 +1,26 @@
+.lists-preview {
+   height: 100%;
+   width: 100%;
+}
+
+.example-spacer {
+   flex: 1 1 auto;
+}
+
+mat-toolbar {
+   background-color: rgb(223, 221, 221);
+}
+
+mat-form-field {
+   margin-left: 9%;
+   width: 50rem;
+}
+
+mat-paginator{
+   position: fixed;
+   bottom: 0;
+   align-content: center;
+   width: 100%;
+   background-color: transparent;
+}
+

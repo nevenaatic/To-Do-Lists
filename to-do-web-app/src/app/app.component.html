@@ -1,0 +1,11 @@
+  <div class="container">
+    <mat-toolbar>
+      <mat-label class="name-label" *ngIf="activeUser"> Hello, {{activeUser}}</mat-label>
+      <span class="example-spacer"></span>
+      <button *ngIf="loginDisplay" mat-mini-fab color="blue" (click)="logOut()">
+        <mat-icon>logout</mat-icon>
+      </button>
+      <button mat-raised-button *ngIf="!loginDisplay" (click)="login()">Login</button>
+    </mat-toolbar>
+  </div>
+  <router-outlet></router-outlet>

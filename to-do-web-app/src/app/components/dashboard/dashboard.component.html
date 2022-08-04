@@ -1,0 +1,19 @@
+<div class="container">
+  <mat-toolbar>
+    <mat-form-field>
+    <input matInput type="text" class="form-control" [(ngModel)]="searchText" (focusout)="searchLists()"
+      placeholder="Search lists"></mat-form-field>
+    <span class="example-spacer"></span>
+    <button mat-mini-fab color="blue" (click)="addNewList()">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="lists-preview mat-card-group row" cdkDropList [cdkDropListData]="lists">
+    <app-to-do-list-preview *ngFor="let list of lists" [list]="list" (deleted)="listDeleted($event)" cdkDrag
+      [cdkDragData]="list.id" (cdkDragDropped)="dropList($event)"></app-to-do-list-preview>
+  </div>
+
+</div>
+  <mat-paginator [length]="this.listSize" [pageSize]="4" [pageSizeOptions]="[4, 8, 16]" (page)="OnPageChange($event)">
+</mat-paginator>
+

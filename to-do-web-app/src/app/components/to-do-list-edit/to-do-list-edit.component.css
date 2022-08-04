@@ -1,0 +1,24 @@
+.form-style {
+   padding-top: 3%;
+   margin-left: 15%;
+}
+
+mat-form-field {
+   width: 100%
+}
+
+.row {
+   margin-bottom: 1%;
+}
+
+label {
+   margin-top: 3%;
+}
+
+.example-spacer {
+   flex: 1 1 auto;
+}
+
+mat-toolbar {
+   background-color: rgb(223, 221, 221);
+}

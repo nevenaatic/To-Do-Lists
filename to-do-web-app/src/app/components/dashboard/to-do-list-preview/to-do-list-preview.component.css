@@ -1,0 +1,21 @@
+.example-card {
+  width: 270px;
+  margin-left: 5px;
+  margin-top: 10%;
+  height: fit-content;
+}
+
+.mat-card-footer {
+  margin-left: 2%;
+}
+
+button {
+  width: 10px;
+  height: 5px;
+  margin-top: -15px;
+}
+
+.material-icons {
+  font-size: 18px;
+  color: gray;
+}

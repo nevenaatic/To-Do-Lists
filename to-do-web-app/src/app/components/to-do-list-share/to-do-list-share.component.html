@@ -1,0 +1,40 @@
+<div class="container">
+
+    <div class="preview">
+        <mat-card *ngIf="!this.message">
+            <div class="row">
+                <div class="col-md-3">
+                    <mat-label> Title: </mat-label>
+
+                </div>
+                <div class="col-md-8">
+                    <mat-card-title>{{list.title}} </mat-card-title>
+                </div>
+            </div>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-3">
+                        <mat-label>
+                            Items:
+                        </mat-label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row" *ngFor="let item of list.items">
+                            <div class="col-md-1">
+                                <mat-icon *ngIf="item.isChecked">check_circle</mat-icon>
+                            </div>
+                            <div class="col-md-7">
+                                {{item.text}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+            <hr>
+            <mat-card-footer *ngIf="list.reminderDate"> <p> Reminder: {{list.reminderDate | date: "dd.mm.yyyy. hh:mm"}}</p></mat-card-footer>
+        </mat-card>
+        <mat-card *ngIf="this.message"> 
+            <mat-card-title> {{this.message}}</mat-card-title>
+        </mat-card>
+    </div>
+</div>

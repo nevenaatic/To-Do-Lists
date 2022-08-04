@@ -1,0 +1,40 @@
+<mat-card class="example-card">
+    <div class="row">
+        <div class="col-md-7">
+            <mat-card-title>{{list.title}} </mat-card-title>
+        </div>
+        <div class="col-md-1">
+            <button mat-icon-button class="button" (click)="edit()">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </div>
+        <div class="col-md-1">
+            <button mat-icon-button class="button" (click)="delete()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+        <div class="col-md-1">
+            <button mat-icon-button class="button" (click)="share()">
+                <mat-icon>share</mat-icon>
+            </button>
+        </div>
+    </div>
+    <mat-card-content>
+        <div *ngFor="let item of list.items" class="container">
+            <section class="example-section">
+                <div class="row">
+                    <div>
+                        <mat-checkbox class="example-margin" [(ngModel)]="item.isChecked" disabled></mat-checkbox>
+                    </div>
+                    <div>
+                        <p>{{item.text}} </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </mat-card-content>
+    <hr>
+    <mat-card-footer *ngIf="list.reminderDate">
+        <p>Reminder: {{list.reminderDate | date: "dd.mm.yyyy. hh:mm"}}</p>
+    </mat-card-footer>
+</mat-card>

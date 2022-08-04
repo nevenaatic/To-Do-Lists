@@ -1,0 +1,9 @@
+.preview{
+    margin-top: 5%;
+    margin-left: 30%;
+    width: 40%;
+    background-color:rgb(223, 221, 221);
+}
+mat-card-title{
+    margin-bottom: 10%;
+}
