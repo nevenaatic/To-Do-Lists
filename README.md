@@ -23,8 +23,8 @@ The API should support the following:
 *  Unit tests.
 
 The API will include the following technologies/service providers:
-* .Net Core 2 (Web API)
-* Entity Framework Core 2
+* .Net Core 6 (Web API)
+* Entity Framework Core 6
 * [SendGrid](https://sendgrid.com/) email server provider
 
  
@@ -41,7 +41,7 @@ following:
 * "RemindMe" logic input fields (add/remove and validations).
  
 The client will include the following technologies:
-* Angular 7
+* Angular 14
 
 
 ## Security & Deployment
