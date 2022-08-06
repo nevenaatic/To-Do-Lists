@@ -3,10 +3,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using System.Reflection;
 using ToDoApi.Options;
 using ToDoApi.Services;
 using ToDoInfrastructure;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +45,11 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
         });
 });
+
+builder.Host.UseSerilog((ctx, lc) => lc
+.WriteTo.Console()
+.ReadFrom.Configuration(ctx.Configuration));
+
 var app = builder.Build();
 app.UseCors(MyAllowSpecificOrigins);
 // Configure the HTTP request pipeline.
@@ -64,5 +72,6 @@ using (var scope = app.Services.CreateScope())
     var dataContext = scope.ServiceProvider.GetRequiredService<ToDoListContext>();
     dataContext.Database.Migrate();
 }
+
 app.Run();
 

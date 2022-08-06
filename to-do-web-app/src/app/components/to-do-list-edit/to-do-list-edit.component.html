@@ -21,11 +21,13 @@
             </div>
             <div class="col-md-9">
                 <mat-form-field appearance="fill">
-                    <input matInput [matDatepicker]="picker1" formControlName="reminderDate" value="reminderDate"
-                        placeholder="Add to-do-list reminder">
-                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                    <mat-datepicker #picker1></mat-datepicker>
-                </mat-form-field>
+                    <input matInput [ngxMatDatetimePicker]="picker1" formControlName="reminderDate"
+                       [min]="minDate" (focusout)="updateList()" >
+                    <mat-datepicker-toggle matSuffix [for]="$any(picker1)" (focusout)="updateList()"></mat-datepicker-toggle>
+                    <ngx-mat-datetime-picker #picker1 [showSpinners]="true" [showSeconds]="false"
+                       [stepHour]="1" [stepMinute]="1" [stepSecond]="1" (focusout)="updateList()">
+                    </ngx-mat-datetime-picker>
+                 </mat-form-field>
             </div>
         </div>
         <div class="row" *ngIf="list.id">

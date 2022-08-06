@@ -20,17 +20,21 @@ namespace ToDoApi.Controllers
     {
         private readonly IMediator _mediator;
         const string scopes = "read_access";
+        private readonly ILogger<ToDoController> _logger;
 
-        public ToDoController(IMediator mediator)
+        public ToDoController(IMediator mediator, ILogger<ToDoController> logger)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+            _logger = logger;
+            _logger.LogInformation("teststststst");
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync([FromQuery] PaginationFilter filter)
+        public async Task<IActionResult> GetAll([FromQuery] PaginationFilter filter)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope("to-do-lists.read");
             var lists = await _mediator.Send(new GetToDoLists.Query { ListOwnerEmail = User.GetEmail(), PaginationFilter = filter });
+            _logger.LogDebug("ToDoLists.GetAll() executed!");
             return Ok(lists);
         }
 

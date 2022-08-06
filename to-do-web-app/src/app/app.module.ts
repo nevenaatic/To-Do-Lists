@@ -18,7 +18,6 @@ import { loginRequest, msalConfig, protectedResources } from './auth-config';
 import { MatButtonModule } from '@angular/material/button';
 import { ToDoListShareComponent } from './components/to-do-list-share/to-do-list-share.component';
 import { AuthGuard } from './core/auth.guard';
-import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication(msalConfig);
@@ -27,7 +26,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
 export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
   const protectedResourceMap = new Map<string, Array<string> | null>();
 
-  protectedResourceMap.set('https://localhost:7011/api/share', null);
+  protectedResourceMap.set('https://to-do-api.azurewebsites.net/api/share', null);
   protectedResourceMap.set(protectedResources.todoListApi.endpoint, protectedResources.todoListApi.scopes);
 
   return {
@@ -62,7 +61,6 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     MatButtonModule,
     MatIconModule,
     MsalModule
-
   ],
   providers: [
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 } },

@@ -33,13 +33,13 @@ namespace ToDoApi.Queries
                 {
                     throw new ArgumentNullException(nameof(request));
                 }
-                var result = _toDoListContext.ToDoLists.Include(l => l.Items)
-                    .Where(x => x.Owner == request.ListOwnerEmail)
-                    .OrderByDescending(l => l.Position)
+                var lists = _toDoListContext.ToDoLists.Include(x => x.Items).Where(x => x.Owner == request.ListOwnerEmail);
+                var result = lists
                     .Skip((request.PaginationFilter.PageNumber - 1) * request.PaginationFilter.PageSize)
                     .Take(request.PaginationFilter.PageSize)
+                    .OrderBy( x => x.Position)
                     .AsEnumerable();
-                return Task.FromResult(new Response { ToDoLists = result, ListSize = _toDoListContext.ToDoLists.Count() });
+                return Task.FromResult(new Response { ToDoLists = result, ListSize = lists.Count() });
             }
         }
     }

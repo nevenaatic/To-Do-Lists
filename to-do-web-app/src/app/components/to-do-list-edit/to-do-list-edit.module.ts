@@ -14,6 +14,8 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule} from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NgxMatMomentModule } from "@angular-material-components/moment-adapter";
+import { NgxMatDatetimePickerModule } from "@angular-material-components/datetime-picker";
 
 @NgModule({
     declarations: [
@@ -37,7 +39,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
       MatToolbarModule,
       MatButtonModule,
       MatSnackBarModule,
-      DragDropModule
+      DragDropModule,
+      NgxMatDatetimePickerModule,
+      NgxMatMomentModule, 
     ],
     providers:[
       MatDatepickerModule,  

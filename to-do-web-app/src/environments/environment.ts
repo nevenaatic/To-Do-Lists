@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: `https://localhost:7011/api`,
-  webUrl: `http://localhost:4200`,
+  apiUrl: `https://to-do-api.azurewebsites.net/api`,
+  webUrl: `https://to-do-web-app.azurewebsites.net/`,
 };
 
 /*

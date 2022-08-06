@@ -6,7 +6,7 @@
    auth: {
      clientId: '4e1ff54b-bf34-4f45-83ce-e50fc32967cd',
      authority: 'https://login.microsoftonline.com/common',
-     redirectUri: 'http://localhost:4200', 
+     redirectUri: 'https://to-do-web-app.azurewebsites.net/', 
    },
    cache: {
      cacheLocation: BrowserCacheLocation.LocalStorage, 
@@ -16,7 +16,7 @@
  
  export const protectedResources = {
    todoListApi: {
-     endpoint: "https://localhost:7011/api/to-do-lists",
+     endpoint: "https://to-do-api.azurewebsites.net/api/to-do-lists",
      scopes: ["api://dbf7f51e-d046-435b-88ee-c4f9ee872967/to-do-lists.read", "api://dbf7f51e-d046-435b-88ee-c4f9ee872967/to-do-lists.write"],
    },
  }

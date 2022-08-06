@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
 import { MessageService } from 'src/app/core/message.service';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
-
 @Component({
     selector: 'app-to-do-list-edit',
     templateUrl: './to-do-list-edit.component.html',
@@ -18,14 +17,15 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class ToDoListEditComponent implements OnInit, OnDestroy {
     subscription: Subscription = new Subscription;
     listId: string | undefined;
-    list = new ToDoList()
+    list = new ToDoList();
+    minDate = new Date();
     form = new FormGroup({
         title: new FormControl('', [Validators.required]),
         reminderDate: new FormControl<Date | undefined>(undefined),
         position: new FormControl<number>(0),
         items: new FormArray<FormGroup<any>>([])
     })
-
+    
     constructor(private readonly listService: ToDoListService, private readonly route: ActivatedRoute,
         private readonly router: Router, private readonly snackBar: MatSnackBar, private messageService: MessageService) {
         this.subscription = this.messageService.$subject.subscribe(list => {

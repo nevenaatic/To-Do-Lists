@@ -35,6 +35,6 @@
     </mat-card-content>
     <hr>
     <mat-card-footer *ngIf="list.reminderDate">
-        <p>Reminder: {{list.reminderDate | date: "dd.mm.yyyy. hh:mm"}}</p>
+        <p>Reminder: {{list.reminderDate | date: 'short'}}</p>
     </mat-card-footer>
 </mat-card>

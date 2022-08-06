@@ -28,7 +28,7 @@ namespace ToDoApi.Commands
                 }
                 request.List.Owner = request.Owner;
                 request.List.Position = _toDoListContext.ToDoLists.ToList().Count() + 1;
-                var res =  _toDoListContext.ToDoLists.Add(request.List);
+                var res = _toDoListContext.ToDoLists.Add(request.List);
                 _toDoListContext.SaveChanges();
                 return Task.FromResult(res.Entity);
             }
