@@ -6,6 +6,17 @@ Is a web application for maintaining to-do lists (like [Google Keep](https://kee
 * [Web Client](#web-client)
 * [Security & Deployment](#security-&-deployment)
 
+<p style="align-items: center">
+<img align="left" alt="HTML" width="46px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+<img align="left" alt="CSS"  width="46px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" /> 
+<img align="left" alt="TypeScript"  width="44px"src="https://imgs.search.brave.com/xRUA4UR_QkfMJQzWWENQ25CQyTSEUn7KjjnNILkmIPU/rs:fit:550:550:1/g:ce/aHR0cDovL3d3dy5z/b2Z0d2FyZS1hcmNo/aXRlY3RzLmNvbS9j/b250ZW50L2ltYWdl/cy9ibG9nLzIwMTYv/MTIvdHlwZXNjcmlw/dC1sb2dvLnBuZw"/>
+<img align="left" alt="Angular" width="56px" height="56px" src="https://imgs.search.brave.com/niD9Ow-Pa2QlCDOjVda7f93oQ5ef85M0wyHGDfvTdiM/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4t/aW1hZ2VzLTEubWVk/aXVtLmNvbS9tYXgv/MTIwMC8xKkdtTXRL/em56SjFkUzhzU3p4/elIzb3cucG5n" />
+<img align="left"  width="56px" height="56px" src="https://img.favpng.com/23/10/7/c-programming-language-logo-microsoft-visual-studio-net-framework-png-favpng-WLLTMqZhSPAk9q3DTh993fZnh.jpg" />
+<img align="left"  width="56px" height="56px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/1200px-Microsoft_.NET_logo.svg.png" />
+<img align="left"  width="56px" height="56px" src="https://www.media3.net/img/m3/mssql.jpg" />
+</p>
+<br /> .
+
 ## The API
 
 An REST API solution which exposes CRUD & search endpoints. Reminder functionality 
